@@ -1,10 +1,8 @@
-import { useLocation } from "react-router-dom";
 import SpotifySearchCard from "../components/SpotifySearchCard";
 import IMDbCard from "../components/IMDbCard";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const location = useLocation();
 
   return (
     <section className={styles.home}>
