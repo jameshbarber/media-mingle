@@ -1,5 +1,5 @@
 // MovieResults.js
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -11,12 +11,14 @@ const getMovies = async (name) => {
   return res?.data?.Search;
 };
 
+const getMovieName = () => {
+  let params = new URLSearchParams(window.location.search);
+  return params.get("name");
+}
+
 const MovieResults = () => {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  console.log(params)
-  const moviesData = params.get("movies");
-  const decodedMovies = JSON.parse(decodeURIComponent(moviesData));
+  const searchedName = getMovieName();
+  const [movies, setMovies] = useState()
 
   return (
     <div>
