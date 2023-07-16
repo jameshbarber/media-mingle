@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import TwitterCard from "../TwitterSearchCard";
 import SpotifySearchCard from "../SpotifySearchCard";
-import IMDbCard from "../IMDbCard";
+import IMDbCard from "../components/IMDbCard";
 import styles from "./Home.module.css";
 
 const Home = () => {
