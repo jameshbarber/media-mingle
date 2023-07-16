@@ -10,20 +10,10 @@ const IMDbCard = () => {
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
-  //get response from API
-  const getInfo = () => {
-    axios.get(api_url + `&s=${name}` + "&type=movie" + "&page=1").then((res) => {
-      if (res.data.Search) {
-        const moviesData = JSON.stringify(res.data.Search);
-        navigate(`/movie-results?movies=${moviesData}`);
-      }
-    });
-  };
-
   //submit the title entered
   const handleSubmit = (e) => {
     e.preventDefault();
-    getInfo();
+    navigate(`/movie-results?name=${name}`)
   };
 
   return (
