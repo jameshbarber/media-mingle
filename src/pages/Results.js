@@ -15,7 +15,7 @@ const getMovieName = () => {
   return params.get("name");
 }
 
-const MovieResults = () => {
+const Results = () => {
   const searchedName = getMovieName();
   const [movies, setMovies] = useState()
 
@@ -44,4 +44,4 @@ const MovieResults = () => {
   );
 }
 
-export default MovieResults;
+export default Results;

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./pages/Home";
-import MovieResults from "./pages/MovieResults";
+import Results from "./pages/Results";
 
 function App() {
   const action = useNavigationType();
@@ -47,7 +47,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/movie-results" element={<MovieResults />} />
+      <Route path="/results" element={<Results />} />
     </Routes>
   );
 }

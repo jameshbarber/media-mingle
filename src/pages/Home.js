@@ -12,7 +12,7 @@ const Home = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/movie-results?name=${name}`)
+    navigate(`/results?name=${name}`)
   };
 
   return (
