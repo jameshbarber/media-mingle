@@ -12,27 +12,13 @@
     font-family: var(--font-inter);
 }
 
-
-.subtitle,
-.title {
-  position: absolute;
-  margin: 0 !important;
-  top: 0;
-  left: 2px;
-  display: inline-block;
-  width: 511px;
-  height: 43px;
-  flex-shrink: 0;
-  z-index: 0;
+.title, .subtitle {
+  width: 100%;
 }
 .subtitle {
-  top: 57px;
-  left: 0;
   font-size: var(--font-size-xl);
-  width: 784px;
-  height: 103px;
-  z-index: 1;
 }
+
 .home,
 .titleWrapper {
   display: flex;
@@ -43,12 +29,9 @@
   
 }
 .titleWrapper {
-  margin: 0 !important;
-  position: absolute;
-  top: 103px;
-  left: 70px;
-  height: 94px;
-  padding: 10px;
   gap: 10px;
   z-index: 3;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
 }
