@@ -34,14 +34,15 @@
   z-index: 1;
 }
 .home,
-.mediamingleParent {
+.titleWrapper {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
+  
 }
-.mediamingleParent {
+.titleWrapper {
   margin: 0 !important;
   position: absolute;
   top: 103px;
@@ -50,4 +51,5 @@
   padding: 10px;
   gap: 10px;
   z-index: 3;
+  
 }
