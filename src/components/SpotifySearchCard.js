@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form } from 'react-bootstrap';
 import styles from './SpotifySearchCard.module.css';
-import Searcher from './components/Searcher';
+import Searcher from './Searcher';
 
 const SpotifySearchCard = () => {
   const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
