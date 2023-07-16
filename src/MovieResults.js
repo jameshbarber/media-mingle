@@ -6,7 +6,7 @@ import axios from "axios";
 const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=caa27cea";
 
 //get response from API
-const getInfo = () => {
+const getMovies = (name) => {
   axios.get(api_url + `&s=${name}` + "&type=movie" + "&page=1").then((res) => {
     if (res.data.Search) {
       const moviesData = JSON.stringify(res.data.Search);
