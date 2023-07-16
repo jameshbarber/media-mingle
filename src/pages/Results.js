@@ -4,6 +4,7 @@ import Layout from "../layouts";
 import SearchField from "../components/SearchField";
 import Searcher from "../services/combined-search";
 import ResultListItem from "../components/ResultListItem";
+import { Grid } from "@geist-ui/core";
 
 const getMovieName = () => {
   let params = new URLSearchParams(window.location.search);
@@ -26,10 +27,16 @@ const Results = () => {
     <Layout>
       <SearchField value={searchedName} />
       Movie Results
-      {movies?.map((movie, i) => {
-        const { Poster, Title } = movie
-        return <ResultListItem key={i} title={Title} image={Poster} />
-      })}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+        gap: "10px"
+      }}>
+        {movies?.map((movie, i) => {
+          const { Poster, Title } = movie
+          return <ResultListItem key={i} title={Title} image={Poster} />
+        })}
+      </div>
       Song Results
     </Layout>
   );

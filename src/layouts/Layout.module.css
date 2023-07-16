@@ -1,7 +1,6 @@
 .home {
   background-color: var(--color-white);
-  width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 40px;
   font-size: 50px;
   color: var(--color-black);
