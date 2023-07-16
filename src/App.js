@@ -4,8 +4,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Home from "./pages/Home";
 import { useEffect } from "react";
+import Home from "./pages/Home";
 import MovieResults from "./pages/MovieResults";
 
 function App() {
