@@ -1,6 +1,7 @@
 // MovieResults.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Layout from "../layouts";
 
 const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=caa27cea";
 
@@ -26,7 +27,7 @@ const Results = () => {
   })
 
   return (
-    <div>
+    <Layout>
       {movies ? <div className="movies">
         {movies?.map((movie) => (
           <div key={movie.imdbID} className="movie">
@@ -40,7 +41,7 @@ const Results = () => {
       </div> : <div>
         Loading...
       </div>}
-    </div>
+    </Layout>
   );
 }
 
