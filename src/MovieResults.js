@@ -1,5 +1,5 @@
 // MovieResults.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -20,21 +20,28 @@ const MovieResults = () => {
   const searchedName = getMovieName();
   const [movies, setMovies] = useState()
 
+  useEffect(() => {
+    getMovies(searchedName).then((res) => {
+      console.log(res)
+      setMovies(res);
+    });
+  })
+
   return (
     <div>
-      {decodedMovies ? (
-        <div className="movies">
-          {decodedMovies.map((movie) => (
-            <div key={movie.imdbID} className="movie">
-              <img src={movie.Poster} alt="" />
-              <div className="movie-title">
-                <p>{movie.Title}</p>
-              </div>
-              <button className="movie-detailsBtn">Details</button>
+      {movies ? <div className="movies">
+        {movies?.map((movie) => (
+          <div key={movie.imdbID} className="movie">
+            <img src={movie.Poster} alt="" />
+            <div className="movie-title">
+              <p>{movie.Title}</p>
             </div>
-          ))}
-        </div>
-      ) : null}
+            <button className="movie-detailsBtn">Details</button>
+          </div>
+        ))}
+      </div> : <div>
+        Loading...
+      </div>}
     </div>
   );
 }
