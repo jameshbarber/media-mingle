@@ -24,6 +24,7 @@ const Results = () => {
   return (
     <Layout>
       <SearchField value={searchedName} />
+      Movie Results
       {movies?.map((movie) => (
         <div key={movie.imdbID} className="movie">
           <img src={movie.Poster} alt="" />
@@ -33,6 +34,7 @@ const Results = () => {
           <button className="movie-detailsBtn">Details</button>
         </div>
       ))}
+      Song Results
     </Layout>
   );
 }
