@@ -1,6 +1,5 @@
 // MovieResults.js
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=caa27cea";
