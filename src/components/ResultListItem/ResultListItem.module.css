@@ -1,0 +1,23 @@
+.item {
+    border-radius: 18px;
+    min-height: 400px;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+}
