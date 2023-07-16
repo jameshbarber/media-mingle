@@ -9,9 +9,8 @@ const Home = () => {
 
   return (
     <section className={styles.home}>
-      {/* <TwitterCard /> */}
-      {location.pathname === "/" && <SpotifySearchCard />}
-      {location.pathname === "/" && <IMDbCard />}
+      <SpotifySearchCard />
+      <IMDbCard />
       <div className={styles.mediamingleParent}>
         <b className={styles.mediamingle}>MediaMingle</b>
         <b className={styles.anAppThat}>
