@@ -4,9 +4,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Home from "./Home";
+import Home from "./pages/Home";
 import { useEffect } from "react";
-import MovieResults from "./pages/movie-results";
+import MovieResults from "./pages/MovieResults";
 
 function App() {
   const action = useNavigationType();
