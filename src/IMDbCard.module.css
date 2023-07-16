@@ -1,0 +1,126 @@
+.imdblogoIcon {
+  position: absolute;
+  top: 444px;
+  left: 89px;
+  width: 252px;
+  height: 102px;
+  object-fit: cover;
+}
+.go {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+}
+.imdbbutton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-36xl);
+  background-color: var(--color-white);
+  margin: 0 !important;
+  position: absolute;
+  top: 61px;
+  left: 70px;
+  border-radius: var(--br-xl);
+  width: 86px;
+  height: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.imdbinput,
+.wrapper {
+  position: absolute;
+  left: 0;
+}
+.wrapper {
+  width: 242px;
+  border: 0;
+  background-color: transparent;
+  margin: 0 !important;
+  top: 0;
+  z-index: 1;
+}
+.imdbinput {
+  top: 33px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  width: 243px;
+  height: 162px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.searchForA {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  display: inline-block;
+  width: 316px;
+  height: 67px;
+}
+.imdbcard,
+.imdbcardInner,
+.imdbinputParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 322px;
+  height: 195px;
+}
+.imdbcard,
+.imdbcardInner {
+  top: 62px;
+  left: 78px;
+  width: 516px;
+}
+.imdbcard {
+  margin: 0 !important;
+  top: 217px;
+  left: 824px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-black);
+  width: 408px;
+  height: 581px;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 2;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.movie {
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.movie-title p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}

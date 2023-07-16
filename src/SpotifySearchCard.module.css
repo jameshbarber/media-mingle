@@ -1,0 +1,81 @@
+.spotifyLogoIcon {
+    position: absolute;
+    top: 197px;
+    left: 612px;
+    width: 79px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .searchForA {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  .searchForASongWrapper {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .spotifyinputFormgroup {
+    border: 0;
+    background-color: transparent;
+  }
+  .go {
+    position: relative;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .spotifybutton {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-sm) var(--padding-36xl);
+    background-color: var(--color-white);
+    border-radius: var(--br-xl);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    width: 86px;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .spotifyinputParent {
+    position: absolute;
+    top: 96px;
+    left: 40px;
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-mid);
+  }
+  .spotifycard {
+    position: absolute;
+    margin: 0 !important;
+    top: 217px;
+    left: 67px;
+    border-radius: var(--br-xl);
+    background-color: var(--color-darkseagreen);
+    width: 726px;
+    height: 290px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+  }
+  
