@@ -1,6 +1,5 @@
 import styles from "./Layout.module.css"
 
-
 const TitleSection = () => {
     return <div className={styles.titleWrapper}>
         <b className={styles.title}>MediaMingle</b>

@@ -1,10 +1,7 @@
 import { Form } from "react-bootstrap";
 import styles from "./IMDbCard.module.css";
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-const api_url = "http://www.omdbapi.com/?i=tt3896198&apikey=caa27cea";
 
 const IMDbCard = () => {
   const [name, setName] = useState("");
