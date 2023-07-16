@@ -13,8 +13,8 @@
 }
 
 
-.anAppThat,
-.mediamingle {
+.subtitle,
+.title {
   position: absolute;
   margin: 0 !important;
   top: 0;
@@ -25,7 +25,7 @@
   flex-shrink: 0;
   z-index: 0;
 }
-.anAppThat {
+.subtitle {
   top: 57px;
   left: 0;
   font-size: var(--font-size-xl);
@@ -51,5 +51,4 @@
   padding: 10px;
   gap: 10px;
   z-index: 3;
-  
 }
