@@ -21,7 +21,6 @@ const MovieResults = () => {
 
   useEffect(() => {
     getMovies(searchedName).then((res) => {
-      console.log(res)
       setMovies(res);
     });
   })
