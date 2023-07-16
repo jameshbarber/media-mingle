@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import { useEffect } from "react";
-import MovieResults from "./MovieResults";
+import MovieResults from "./pages/movie-results";
 
 function App() {
   const action = useNavigationType();
