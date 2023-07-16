@@ -1,12 +1,12 @@
-import { Input } from "@geist-ui/core"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import styles from "./SearchField.module.css"
 
 
 const SearchField = ({ value }) => {
+
     const [name, setName] = useState(value ?? "")
     const navigate = useNavigate();
-
 
     const handleInput = e => {
         setName(e.target.value)
@@ -17,9 +17,8 @@ const SearchField = ({ value }) => {
         navigate(`/results?name=${name}`)
     };
 
-
-    return <form onSubmit={handleSubmit}>
-        <Input value={name} placeholder="Search movies & music" onChange={handleInput} />
+    return <form style={{ width: "100%", textAlign: "center", marginBottom: "48px" }} onSubmit={handleSubmit}>
+        <input className={styles.input} value={name} placeholder="Search movies & music" onChange={handleInput} />
     </form>
 }
 
