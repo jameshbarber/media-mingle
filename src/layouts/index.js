@@ -9,8 +9,8 @@ const TitleSection = () => {
         <div className={styles.poweredBy}>
             Powered by
             <div className={styles.logoStack}>
-                <img className={styles.logo} src="/spotifylogo@2x.png" />
-                <img className={styles.logo} src="/imdblogo@2x.png" />
+                <img alt="Spotify Logo" className={styles.logo} src="/spotifylogo@2x.png" />
+                <img alt="IMDB Logo" className={styles.logo} src="/imdblogo@2x.png" />
             </div>
         </div>
     </div>
