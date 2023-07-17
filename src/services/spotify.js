@@ -12,7 +12,6 @@ class SpotifyAPI {
     static getToken() {
         const rs = Cookies.get("spotify_token")
         return rs ?? null
-        if (!rs && rs !== "undefined") return rs
     }
 
     static getLoginURL() {

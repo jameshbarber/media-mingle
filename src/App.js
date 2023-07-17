@@ -7,6 +7,7 @@ import {
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
+import AuthorisePage from "./pages/Authorise";
 
 function App() {
   const action = useNavigationType();
@@ -48,6 +49,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/results" element={<Results />} />
+      <Route path="/authorise" element={<AuthorisePage/>}></Route>
     </Routes>
   );
 }

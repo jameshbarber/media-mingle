@@ -4,6 +4,8 @@ import Layout from "../layouts";
 import SearchField from "../components/SearchField";
 import Searcher from "../services/combined-search";
 import ResultListItem from "../components/ResultListItem";
+import SpotifyAPI from "../services/spotify";
+import { useNavigate } from "react-router-dom";
 
 const getMovieName = () => {
   let params = new URLSearchParams(window.location.search);
@@ -14,7 +16,8 @@ const ResultContainer = ({ children }) => {
   return <div style={{
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-    gap: "10px"
+    gap: "10px",
+    marginBottom: "24px"
   }}>
     {children}
   </div>
@@ -42,6 +45,30 @@ const MovieResults = ({ movies, loading }) => {
 }
 
 
+
+const TrackResults = ({tracks}) => {
+
+  const token = SpotifyAPI.getToken();
+
+  const loginToSpotify = () => {
+    const loginURL = SpotifyAPI.getLoginURL()
+    window.location.href = loginURL
+  }
+
+  return <div>
+    Track Results
+    <ResultContainer>
+    {tracks?.map((track, i)=>{
+      console.log(track.album?.images?.[0].url)
+      return <ResultListItem key={i} image={track.album?.images?.[0]?.url} subtitle="" title={track?.name}></ResultListItem>
+    })}
+    </ResultContainer>
+    {!token && <div>
+      <button onClick={loginToSpotify}>Log in to Spotify</button>
+    </div>}
+  </div>
+}
+
 const Results = () => {
   const [loading, setLoading] = useState()
   const searchedName = getMovieName();
@@ -49,7 +76,8 @@ const Results = () => {
 
   useEffect(() => {
     setLoading(true)
-    Searcher.search(searchedName).then((res => {
+    Searcher.search(searchedName)
+    .then((res => {
       setSearchResults(res)
       setLoading(false)
     }))
@@ -60,6 +88,7 @@ const Results = () => {
     <Layout>
       <SearchField value={searchedName} />
       <MovieResults loading={loading} movies={searchResults?.movies} />
+      <TrackResults loading={loading} tracks={searchResults?.tracks} />
     </Layout>
   );
 }
