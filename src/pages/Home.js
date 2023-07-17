@@ -3,7 +3,6 @@ import Layout from "../layouts";
 
 const Home = () => {
 
-  //submit the title entered
   return (
     <Layout>
       <SearchField />
