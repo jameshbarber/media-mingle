@@ -6,6 +6,13 @@ const TitleSection = () => {
         <b className={styles.subtitle}>
             An app that lets you search for music, tweets AND movies!
         </b>
+        <div className={styles.poweredBy}>
+            Powered by
+            <div className={styles.logoStack}>
+                <img className={styles.logo} src="/spotifylogo@2x.png" />
+                <img className={styles.logo} src="/imdblogo@2x.png" />
+            </div>
+        </div>
     </div>
 }
 
